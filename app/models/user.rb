@@ -1,10 +1,9 @@
 class User < ApplicationRecord
-  # belongs_to :question_id
-
   has_secure_password
 
-  belongs_to :question
+  has_many :questions
   has_many :answers
+  
 
   def answers_order_recent
     answers.order(created_at: :desc).where(active: true).limit(100)
