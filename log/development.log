@@ -177,3 +177,622 @@ Processing by AnswersController#create as */*
 Completed 201 Created in 84ms (Views: 0.7ms | ActiveRecord: 10.9ms | Allocations: 9525)
 
 
+Started GET "/" for ::1 at 2021-10-01 22:34:28 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/eric/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.0ms | Allocations: 356)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 2798)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 13:12:02 +0100
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (2.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 9.2ms | ActiveRecord: 6.6ms | Allocations: 7837)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 16:49:44 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 10.1ms | ActiveRecord: 7.8ms | Allocations: 7836)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-10-02 16:58:00 +0100
+Processing by UsersController#create as */*
+  Parameters: {"username"=>"manny", "password"=>"[FILTERED]", "user"=>{"username"=>"manny"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "manny"], ["password_digest", "$2a$12$HMmnRqxrS6Y3gRKywtPcpePHVU4DrC9ejwXK3zf5d2jtFsQJhDl/i"], ["created_at", "2021-10-02 15:58:01.151517"], ["updated_at", "2021-10-02 15:58:01.151517"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 321ms (Views: 0.3ms | ActiveRecord: 16.5ms | Allocations: 4898)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test_user"], ["password_digest", "$2a$12$Vw.UD7UZbYNcjYZV8m0.hOTQFR8YlPS0F3LfRYnkul7sR57IvqO.q"], ["created_at", "2021-10-02 16:04:49.506165"], ["updated_at", "2021-10-02 16:04:49.506165"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 17:05:18 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 8.6ms | ActiveRecord: 5.4ms | Allocations: 7838)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 17:30:37 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 22.1ms | ActiveRecord: 7.3ms | Allocations: 2685)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 17:30:38 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 756)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:10:42 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 7.1ms | Allocations: 2722)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-10-02 20:14:11 +0100
+Processing by UsersController#create as JSON
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "user"=>{"username"=>"test_user"}}
+[31mUnpermitted parameter: :user[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "test_user"], ["password_digest", "$2a$12$z3vQw5q7inbTCvj7li1naOD5J5oFZte.5TCrISqtcmptUriDK35Hi"], ["created_at", "2021-10-02 19:14:11.571997"], ["updated_at", "2021-10-02 19:14:11.571997"]]
+  ↳ app/controllers/users_controller.rb:4:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:4:in `create'
+Completed 201 Created in 328ms (Views: 0.4ms | ActiveRecord: 12.2ms | Allocations: 4894)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:14:11 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:15:11 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (6.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 6.2ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:15:12 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 755)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:15:14 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:15:16 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:15:40 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.5ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:15:51 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:24:49 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 7.6ms | Allocations: 2667)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:25:11 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.9ms | Allocations: 739)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-10-02 20:28:58 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 322ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 1307)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:28:59 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-10-02 20:29:58 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 305ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 624)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:29:58 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:48:55 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 6.5ms | Allocations: 2667)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:49:47 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:49:58 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 20:53:49 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 21:06:29 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 10.4ms | Allocations: 2667)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 21:06:30 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 21:08:16 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 21:08:32 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 739)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-10-02 22:02:58 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 325ms (Views: 0.2ms | ActiveRecord: 6.7ms | Allocations: 2581)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:02:58 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:03:36 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:04:08 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 360ms (Views: 332.2ms | ActiveRecord: 6.1ms | Allocations: 343215)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:22:20 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 12.0ms | Allocations: 2708)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:22:27 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 1.1ms | ActiveRecord: 0.5ms | Allocations: 2017)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:22:31 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 741)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:23:58 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:23:58 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:26:06 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 739)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:26:14 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 1.0ms | ActiveRecord: 2.2ms | Allocations: 1991)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:26:21 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:29:45 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 739)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:31:10 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:33:39 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 1984)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:38:14 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AnswersController#create as */*
+  Parameters: {"answer_many"=>"hot dog is not sandwiched", "user_id"=>1, "question_id"=>1, "answer"=>{"answer_many"=>"hot dog is not sandwiched", "user_id"=>1, "question_id"=>1}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mAnswer Create (2.8ms)[0m  [1m[32mINSERT INTO "answers" ("answer_many", "user_id", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["answer_many", "hot dog is not sandwiched"], ["user_id", 1], ["question_id", 1], ["created_at", "2021-10-02 21:38:14.787174"], ["updated_at", "2021-10-02 21:38:14.787174"]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+Completed 201 Created in 71ms (Views: 0.5ms | ActiveRecord: 18.1ms | Allocations: 21018)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:38:46 +0100
+Processing by AnswersController#create as */*
+  Parameters: {"answer_many"=>"hot dog is not sandwiched and will not", "user_id"=>2, "question_id"=>2, "answer"=>{"answer_many"=>"hot dog is not sandwiched and will not", "user_id"=>2, "question_id"=>2}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 446ms (Views: 427.7ms | ActiveRecord: 1.4ms | Allocations: 339866)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:39:22 +0100
+Processing by AnswersController#create as */*
+  Parameters: {"answer_many"=>"hot dog is not sandwiched and will not", "user_id"=>1, "question_id"=>1, "answer"=>{"answer_many"=>"hot dog is not sandwiched and will not", "user_id"=>1, "question_id"=>1}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mAnswer Create (0.7ms)[0m  [1m[32mINSERT INTO "answers" ("answer_many", "user_id", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["answer_many", "hot dog is not sandwiched and will not"], ["user_id", 1], ["question_id", 1], ["created_at", "2021-10-02 21:39:22.451654"], ["updated_at", "2021-10-02 21:39:22.451654"]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+Completed 201 Created in 18ms (Views: 0.5ms | ActiveRecord: 4.3ms | Allocations: 4165)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:40:30 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 866)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 22:40:35 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 12ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1997)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 22:42:58 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 741)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:00:59 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 29ms (Views: 1.1ms | ActiveRecord: 7.0ms | Allocations: 3987)
+
+
+Started GET "/api/v1/answers" for ::1 at 2021-10-02 23:04:55 +0100
+Processing by AnswersController#index as */*
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 140)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-10-02 23:05:09 +0100
+Processing by AuthenticationsController#create as */*
+  Parameters: {"username"=>"test_123", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_123", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_123"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 312ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 843)
+
+
+Started GET "/api/v1/answers" for ::1 at 2021-10-02 23:05:40 +0100
+Processing by AnswersController#index as */*
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 104)
+
+
+Started GET "/api/v1/answers" for ::1 at 2021-10-02 23:06:39 +0100
+Processing by AnswersController#index as */*
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 102)
+
+
+Started GET "/api/v1/answers" for ::1 at 2021-10-02 23:07:51 +0100
+Processing by AnswersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mAnswer Load (0.6ms)[0m  [1m[34mSELECT "answers".* FROM "answers" WHERE "answers"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/answers_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 7.9ms | ActiveRecord: 1.0ms | Allocations: 2468)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 23:12:12 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 739)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:12:16 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1984)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 23:15:24 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 755)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:15:28 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 1987)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 23:18:35 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 741)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:18:39 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1984)
+
+
+Started POST "/api/v1/authentications" for ::1 at 2021-10-02 23:21:33 +0100
+Processing by AuthenticationsController#create as JSON
+  Parameters: {"username"=>"test_user", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test_user", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test_user"], ["LIMIT", 1]]
+  ↳ app/controllers/authentications_controller.rb:3:in `create'
+Completed 200 OK in 320ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 626)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 23:21:34 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:21:59 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 1987)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:24:54 +0100
+Processing by AnswersController#create as */*
+  Parameters: {"answer_many"=>"hot dog is not sandwiched and will not", "user_id"=>1, "question_id"=>1, "answer"=>{"answer_many"=>"hot dog is not sandwiched and will not", "user_id"=>1, "question_id"=>1}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mAnswer Create (1.0ms)[0m  [1m[32mINSERT INTO "answers" ("answer_many", "user_id", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["answer_many", "hot dog is not sandwiched and will not"], ["user_id", 1], ["question_id", 1], ["created_at", "2021-10-02 22:24:54.744704"], ["updated_at", "2021-10-02 22:24:54.744704"]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+Completed 201 Created in 19ms (Views: 0.5ms | ActiveRecord: 5.3ms | Allocations: 4153)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:25:12 +0100
+Processing by AnswersController#create as */*
+  Parameters: {"answer_many"=>"hot dog is not sandwiched and will not hold now", "user_id"=>1, "question_id"=>1, "answer"=>{"answer_many"=>"hot dog is not sandwiched and will not hold now", "user_id"=>1, "question_id"=>1}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mAnswer Create (0.7ms)[0m  [1m[32mINSERT INTO "answers" ("answer_many", "user_id", "question_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["answer_many", "hot dog is not sandwiched and will not hold now"], ["user_id", 1], ["question_id", 1], ["created_at", "2021-10-02 22:25:12.467315"], ["updated_at", "2021-10-02 22:25:12.467315"]]
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/answers_controller.rb:17:in `create'
+Completed 201 Created in 21ms (Views: 0.7ms | ActiveRecord: 7.5ms | Allocations: 4141)
+
+
+Started GET "/api/v1/questions" for ::1 at 2021-10-02 23:29:57 +0100
+Processing by QuestionsController#index as */*
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 739)
+
+
+Started POST "/api/v1/answers" for ::1 at 2021-10-02 23:30:00 +0100
+Processing by AnswersController#create as JSON
+  Parameters: {"answer_many"=>"sandwich is not a hot dog", "question_id"=>"", "user_id"=>4, "answer"=>{"answer_many"=>"sandwich is not a hot dog", "user_id"=>4, "question_id"=>""}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:28:in `current_user'
+[31mUnpermitted parameter: :answer[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1984)
+
+

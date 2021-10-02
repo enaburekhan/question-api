@@ -7,4 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Question.create(question_one: 'Is a hot dog a sandwich? Why?', user_id: 1)
+User.create(username: 'test_user', password: '123456')
+Question.create(question_one: 'Is a hot dog a sandwich? Why?')
