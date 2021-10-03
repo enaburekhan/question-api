@@ -42,6 +42,6 @@ class AnswersController < ApplicationController
   end
 
   def answer_params
-    params.permit(:answer_many, :question_id, :user_id)
+    params.permit(:answer_many, :user_id)
   end
 end
