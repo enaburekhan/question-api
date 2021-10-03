@@ -1,5 +1,5 @@
-# doctors-appointment-api
-Question-api is the backend of the app that polls answers from asking the question: Is a hot dog a sandwich? Why?. This repo host the backend. To access the react-redux frontend, go to [question-app]()
+# question-api
+Question-api is the backend of the app that polls answers from asking the question: Is a hot dog a sandwich? Why?. This repo host the backend. To access the react-redux frontend, go to [question-app](https://github.com/enaburekhan/question-app.git)
 
 ## Built With
 
@@ -19,6 +19,10 @@ Question-api is the backend of the app that polls answers from asking the questi
 ## API endpoint 
 
 [question-api]()
+
+## Screenshot
+![question-api_ERD](https://user-images.githubusercontent.com/51296741/135769280-a1bbee38-8810-4b20-928b-68ac68af52fc.png)
+
 
 ## Getting Started
 
