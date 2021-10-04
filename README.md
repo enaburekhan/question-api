@@ -16,10 +16,6 @@ Question-api is the backend of the app that polls answers from asking the questi
 - A logged in user must be able to submit multiple answers
 
 
-## API endpoint 
-
-[question-api]()
-
 ## Screenshot
 ![question-api_ERD](https://user-images.githubusercontent.com/51296741/135769280-a1bbee38-8810-4b20-928b-68ac68af52fc.png)
 
@@ -69,23 +65,6 @@ Open `http://localhost:3000/` in your browser.
 
 > If the test suite passes, you'll be ready to run the app in a local server:
 
-# Deployment
-To deploy to heroku first login in heroku
-
-### heroku login
-Create a new project in heroku
-
-### heroku create
-You can verify that the remote was added to your project by running:
-
- - git config --list | grep heroku 
- - git push heroku master 
-
-### Migrate your database
-
-heroku run rails db:migrate
-heroku run rails db:seed
-
 ### Tools used on this project
 - Visual Studio Code
 - Rubocop for Visual Studio Code
@@ -109,7 +88,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Many thanks to the open source community for making it possible for me to use free tools.
+- Many thanks to the open source community for making it possible for me to use the available free tools.
 
 
 
